@@ -4,7 +4,9 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
   def index
-    @accounts = Account.all
+    # @accounts = Account.all
+    account = Account.find(params[:account_id])
+    @accounts = account
   end
 
   # GET /accounts/1
